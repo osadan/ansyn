@@ -1043,6 +1043,47 @@
 								-180,
 								-90
 							]
+						] 
+					]
+				]
+			}
+		],
+		"blacklist": []
+	},
+  "CUSTOM_SOURCE": {
+		"whitelist": [
+			{
+				"name": "Entire Earth",
+				"dates": [
+					{
+						"start": null,
+						"end": null
+					}
+				],
+				"sensorNames": "{{ getv "/ansyn/overlay/open/aerial/sensor/names" "[ null ]" }}",
+				"coverage": [
+					[
+						[
+							[
+								-180,
+								-90
+							],
+							[
+								-180,
+								90
+							],
+							[
+								180,
+								90
+							],
+							[
+								180,
+								-90
+							],
+							[
+								-180,
+								-90
+							]
 						]
 					]
 				]
@@ -1058,6 +1099,8 @@
   },
   "openAerialOverlaysSourceConfig": {
   	"baseUrl": "https://api.openaerialmap.org/meta"
+  },
+  "customOverlaysSourceConfig": {
   },
   "planetOverlaysSourceConfig": {
     "baseUrl": "https://api.planet.com/data/v1/quick-search",

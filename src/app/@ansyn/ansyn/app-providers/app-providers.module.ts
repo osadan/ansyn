@@ -21,6 +21,7 @@ import { NotGeoRegisteredPlaneSourceProvider } from './overlay-source-providers/
 import { OpenAerialSourceProvider } from './overlay-source-providers/open-aerial-source-provider';
 import { PlanetSourceProvider } from './overlay-source-providers/planet/planet-source-provider';
 import { IdahoSourceProvider } from './overlay-source-providers/idaho-source-provider';
+import { CustomSourceProvider } from './overlay-source-providers/custom-source-provider';
 
 @NgModule({
 	imports: [
@@ -45,10 +46,11 @@ import { IdahoSourceProvider } from './overlay-source-providers/idaho-source-pro
 		// Source provider for overlays
 		{ provide: BaseOverlaySourceProvider, useClass: MultipleOverlaysSourceProvider },
 
-		{ provide: MultipleOverlaysSource, useClass: PlanetSourceProvider, multi: true },
-		{ provide: MultipleOverlaysSource, useClass: NotGeoRegisteredPlaneSourceProvider, multi: true },
-		{ provide: MultipleOverlaysSource, useClass: OpenAerialSourceProvider, multi: true },
-		{ provide: MultipleOverlaysSource, useClass: IdahoSourceProvider, multi: true },
+		// { provide: MultipleOverlaysSource, useClass: PlanetSourceProvider, multi: true },
+		// { provide: MultipleOverlaysSource, useClass: NotGeoRegisteredPlaneSourceProvider, multi: true },
+		// { provide: MultipleOverlaysSource, useClass: OpenAerialSourceProvider, multi: true },
+		// { provide: MultipleOverlaysSource, useClass: IdahoSourceProvider, multi: true },
+		{ provide: MultipleOverlaysSource, useClass: CustomSourceProvider, multi: true}, 
 
 		// Source provider for filters
 		{ provide: FilterMetadata, useClass: EnumFilterMetadata, multi: true },
