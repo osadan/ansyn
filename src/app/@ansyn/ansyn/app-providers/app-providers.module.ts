@@ -22,6 +22,7 @@ import { OpenAerialSourceProvider } from './overlay-source-providers/open-aerial
 import { PlanetSourceProvider } from './overlay-source-providers/planet/planet-source-provider';
 import { IdahoSourceProvider } from './overlay-source-providers/idaho-source-provider';
 import { CustomSourceProvider } from './overlay-source-providers/custom-source-provider';
+import { OpenLayerCustomImageSourceProvider } from './map-source-providers/open-layers-custom-image-source-provider';
 
 @NgModule({
 	imports: [
@@ -36,7 +37,8 @@ import { CustomSourceProvider } from './overlay-source-providers/custom-source-p
 				OpenLayerNotGeoRegisteredPlanetSourceProvider,
 				OpenLayerBingSourceProvider,
 				OpenLayerESRI4326SourceProvider,
-				OpenLayerOpenAerialSourceProvider
+				OpenLayerOpenAerialSourceProvider,
+				OpenLayerCustomImageSourceProvider
 			],
 			plugins: [],
 			maps: []
