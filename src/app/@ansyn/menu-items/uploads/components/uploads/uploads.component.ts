@@ -58,7 +58,6 @@ export class UploadsComponent {
 	}
 
 	onSubmit() {
-		this.resetForm();
 		this.loading = true;
 		const formData = new FormData();
 		formData.append('description', this.description);
@@ -67,7 +66,6 @@ export class UploadsComponent {
 		formData.append('sensorName', this.sensorName);
 		formData.append('sharing', this.sharing);
 		Array.from(this.files).forEach((file) => formData.append('uploads', file));
-
 		this.httpClient
 			.post(this.config.apiUrl, formData)
 			.pipe(
@@ -75,6 +73,7 @@ export class UploadsComponent {
 				catchError((err) => this.errorHandlerService.httpErrorHandle(err, 'Failed to upload file', null)),
 				tap(() => {
 					this.loading = false;
+					this.resetForm();
 				})
 			)
 			.subscribe();
@@ -83,6 +82,7 @@ export class UploadsComponent {
 	resetForm() {
 		this.sharing = this.config.defaultSharing;
 		this.description = '';
+		this.creditName = '';
 		this.licence = false;
 		this.sensorType = this.config.defaultSensorType;
 		this.sensorName = '';
