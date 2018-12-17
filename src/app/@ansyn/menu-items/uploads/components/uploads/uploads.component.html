@@ -80,6 +80,7 @@
 
 		<div class="form-field">
 			<ansyn-checkbox
+				required
 				name="licence"
 				[(ngModel)]="licence">
 				<span class="licence">I agree to the <a [href]="rulesLink" target="_blank">rules</a></span>
@@ -89,6 +90,7 @@
 		<button ansynButton class="reset" type="button" [disabled]="disabledReset()" (click)="resetForm()" >Reset</button>
 		<button ansynButton type="submit" [disabled]="!f.valid || loading || !licence">Submit</button>
 
+		<span>valid {{f.valid}}</span>
 	</form>
 </div>
 
