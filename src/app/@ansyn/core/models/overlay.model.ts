@@ -38,7 +38,8 @@ export interface IOverlay extends IDilutedOverlay {
 	tag?: any; // original metadata
 	projection?: string;
 	token?: string;
-	catalogID?: string,
+	catalogID?: string;
+	centerOfMass?: any;
 }
 
 export class Overlay implements IOverlay {

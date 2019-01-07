@@ -166,3 +166,5 @@ export const selectActiveMapId = createSelector(mapStateSelector, (map: IMapStat
 export const selectMapsList = createSelector(mapStateSelector, selectAll);
 export const selectMapsIds = createSelector(mapStateSelector, selectIds);
 export const selectMaps = createSelector(mapStateSelector, selectEntities);
+
+export const activeMap = createSelector(selectMaps, selectActiveMapId, (maps, activeMapId) => maps[activeMapId]);

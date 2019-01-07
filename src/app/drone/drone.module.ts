@@ -5,6 +5,7 @@ import { OpenLayerTBSourceProvider } from './map-source-provider/open-layers-TB-
 import { OverlaysModule } from '@ansyn/overlays';
 import { TBSourceProvider } from './overlay-source-provider/tb-source-provider';
 import { UploadsModule } from './uploads/uploads.module';
+import { DroneMarkerVisualizer } from './marker-visualizer/marker-visualizer';
 
 @NgModule({
 	imports: [
@@ -13,7 +14,9 @@ import { UploadsModule } from './uploads/uploads.module';
 			mapSourceProviders: [
 				OpenLayerTBSourceProvider
 			],
-			plugins: [],
+			plugins: [
+				DroneMarkerVisualizer
+			],
 			maps: []
 		}),
 		OverlaysModule.provide({

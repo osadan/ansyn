@@ -1,0 +1,10 @@
+{
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": true,
+  "editor.tabSize": 4,
+  "editor.formatOnSave": false,
+  "editor.autoIndent": true,
+  "prettier.tabWidth": 4,
+  "prettier.useTabs": true,
+  "tslint.autoFixOnSave": true
+}
